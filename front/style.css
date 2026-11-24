@@ -1,0 +1,373 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f2fa;
+    color: #25213a;
+    min-height: 100vh;
+}
+
+/* CABEÇALHO */
+
+.topo {
+    background: #ffffff;
+    padding: 18px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 3px 15px #24134b12;
+    border-bottom: 1px solid #eee9f8;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #5636a5;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: #a477ed;
+}
+
+.usuario-menu {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#btnSair {
+    background: #f1edfa;
+    color: #5636a5;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#btnSair:hover {
+    background: #e2d8f7;
+}
+
+/* CONTEÚDO */
+
+main {
+    max-width: 760px;
+    margin: 40px auto;
+    padding: 0 18px;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 17px;
+    box-shadow: 0 5px 25px #29164b0d;
+}
+
+/* LOGIN E CADASTRO */
+
+.auth {
+    max-width: 440px;
+    margin: 45px auto;
+    padding: 38px;
+}
+
+.icone-logo {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #5636a5, #a477ed);
+    color: white;
+    border-radius: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 23px;
+}
+
+.auth h1 {
+    font-size: 26px;
+    margin-bottom: 9px;
+    color: #30234e;
+}
+
+.subtitulo {
+    color: #9992aa;
+    margin-bottom: 27px;
+    font-size: 14px;
+}
+
+/* FORMULÁRIOS */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    font-size: 13px;
+    font-weight: bold;
+    color: #514768;
+    margin-top: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #e6e1ef;
+    background: #faf9fd;
+    border-radius: 9px;
+    font-size: 14px;
+    outline: none;
+    font-family: Arial, sans-serif;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #8562ce;
+    background: white;
+    box-shadow: 0 0 0 3px #8562ce15;
+}
+
+textarea {
+    min-height: 115px;
+    resize: vertical;
+}
+
+/* BOTÕES */
+
+button {
+    transition: 0.2s;
+}
+
+.btn-principal {
+    background: linear-gradient(135deg, #5636a5, #8055cf);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.btn-principal:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px #5636a540;
+}
+
+.troca-tela {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 14px;
+    color: #777;
+}
+
+a {
+    color: #7048bb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* FEED */
+
+.boas-vindas {
+    margin-bottom: 25px;
+}
+
+.boas-vindas h1 {
+    color: #30234e;
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+
+.boas-vindas p {
+    color: #91899f;
+    font-size: 14px;
+}
+
+.criar-post h2,
+.feed-container h2 {
+    color: #5636a5;
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+
+.titulo-feed {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.btn-atualizar {
+    border: none;
+    background: #ebe5f8;
+    color: #5636a5;
+    padding: 9px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-atualizar:hover {
+    background: #ddd2f3;
+}
+
+/* PUBLICAÇÕES */
+
+.feed-container {
+    background: white;
+    padding: 25px;
+    border-radius: 17px;
+    box-shadow: 0 5px 25px #29164b0d;
+}
+
+.publicacao {
+    padding: 22px 0;
+    border-bottom: 1px solid #eeeaf4;
+}
+
+.publicacao:last-child {
+    border-bottom: none;
+}
+
+.autor-post {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #5636a5, #b08bea);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+.autor-info strong {
+    display: block;
+    font-size: 14px;
+    color: #30234e;
+}
+
+.autor-info small {
+    color: #9992aa;
+    font-size: 11px;
+}
+
+.publicacao p {
+    margin: 12px 0;
+    line-height: 1.6;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.publicacao img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-top: 10px;
+}
+
+.btnCurtir {
+    margin-top: 12px;
+    padding: 10px 17px;
+    background: #f1edfa;
+    color: #6945ae;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btnCurtir:hover {
+    background: #e4daf6;
+}
+
+.btnCurtir:disabled {
+    background: #e6def4;
+    color: #5636a5;
+    cursor: default;
+}
+
+.carregando,
+.mensagem-vazia {
+    text-align: center;
+    color: #9992aa;
+    padding: 25px 0;
+    font-size: 14px;
+}
+
+/* RODAPÉ */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #aaa2b8;
+    font-size: 12px;
+}
+
+/* RESPONSIVIDADE */
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 600px) {
+
+    .topo {
+        padding: 16px 5%;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    main {
+        margin: 25px auto;
+    }
+
+    .auth {
+        padding: 25px;
+    }
+
+    .container,
+    .feed-container {
+        padding: 20px;
+    }
+
+    .boas-vindas h1 {
+        font-size: 22px;
+    }
+
+    .titulo-feed h2 {
+        font-size: 16px;
+    }
+
+}
+

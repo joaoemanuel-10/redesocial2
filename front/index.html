@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>InstaRede | Sua rede social</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="topo">
+        <div class="logo">Insta<span>Rede</span></div>
+
+        <div class="usuario-menu">
+            <span id="nomeUsuario"></span>
+            <button id="btnSair" onclick="sair()" hidden>
+                Sair
+            </button>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- LOGIN -->
+        <section id="telaLogin" class="container auth">
+
+            <div class="icone-logo">IR</div>
+
+            <h1>Bem-vindo de volta!</h1>
+            <p class="subtitulo">Entre na sua conta e fique conectado.</p>
+
+            <form id="formLogin">
+
+                <label>Nome de usuário</label>
+                <input
+                    type="text"
+                    id="loginUsuario"
+                    placeholder="Digite seu usuário"
+                    required
+                >
+
+                <label>Senha</label>
+                <input
+                    type="password"
+                    id="loginSenha"
+                    placeholder="Digite sua senha"
+                    required
+                >
+
+                <button type="submit" class="btn-principal">
+                    Entrar na conta
+                </button>
+
+            </form>
+
+            <p class="troca-tela">
+                Ainda não tem conta?
+                <a href="#" onclick="mostrarCadastro(event)">
+                    Criar conta
+                </a>
+            </p>
+
+        </section>
+
+
+        <!-- CADASTRO -->
+        <section id="telaCadastro" class="container auth" hidden>
+
+            <div class="icone-logo">IR</div>
+
+            <h1>Crie sua conta!</h1>
+            <p class="subtitulo">Faça parte da comunidade InstaRede.</p>
+
+            <form id="formCadastro">
+
+                <label>Nome completo</label>
+                <input
+                    type="text"
+                    id="nome"
+                    placeholder="Seu nome completo"
+                    required
+                >
+
+                <label>Nome de usuário</label>
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Escolha seu usuário"
+                    required
+                >
+
+                <label>E-mail</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="seuemail@email.com"
+                    required
+                >
+
+                <label>Senha</label>
+                <input
+                    type="password"
+                    id="senha"
+                    placeholder="Crie uma senha"
+                    required
+                    minlength="4"
+                >
+
+                <button type="submit" class="btn-principal">
+                    Criar minha conta
+                </button>
+
+            </form>
+
+            <p class="troca-tela">
+                Já possui uma conta?
+                <a href="#" onclick="mostrarLogin(event)">
+                    Fazer login
+                </a>
+            </p>
+
+        </section>
+
+
+        <!-- FEED -->
+        <section id="telaFeed" hidden>
+
+            <div class="boas-vindas">
+                <h1>Seu mundo, suas conexões.</h1>
+                <p>Compartilhe momentos com a comunidade.</p>
+            </div>
+
+            <!-- CRIAR PUBLICAÇÃO -->
+            <div class="container criar-post">
+
+                <h2>Criar publicação</h2>
+
+                <form id="formPublicacao">
+
+                    <textarea
+                        id="legenda"
+                        placeholder="O que você está pensando hoje?"
+                        required
+                    ></textarea>
+
+                    <input
+                        type="url"
+                        id="imagemUrl"
+                        placeholder="Cole aqui o link de uma imagem (opcional)"
+                    >
+
+                    <button type="submit" class="btn-principal">
+                        + Compartilhar publicação
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- PUBLICAÇÕES -->
+            <div class="feed-container">
+
+                <div class="titulo-feed">
+                    <h2>Explorar publicações</h2>
+                    <button onclick="carregarPublicacoes()" class="btn-atualizar">
+                        Atualizar
+                    </button>
+                </div>
+
+                <div id="feed">
+
+                    <p class="carregando">Carregando publicações...</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 InstaRede - Conectando pessoas.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
